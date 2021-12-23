@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dd,dt,p,input{margin:0px;padding:0px;}
+ul,li,dl,dd,dt,ol{list-style:none;}
+ins{display:none;}
+img{border:none;display: block;}
+.clear{font-size:0px;line-height:0px;display:block;clear:both;}
+
+a{cursor:pointer;}
+a:link,a:visited{color:#0072ff;/*text-decoration:none;*/}
+a:hover{color:#09baef;/*text-decoration:none;*/}
+
+body{ font:15px/24px Arial,"microsoft yahei"; color:#000; background:#ebeef8; }
+
+.hd_body{  width: 700px; margin: 0 auto; position: relative; }
+.hd_body:after{ clear: both; content: ""; display: table; }
+.hd_body img.hd_head_bg{ width: 100%; height: auto; }
+
+
+/* css注释：设置了浏览器宽度不小于1001px时 PC */ 
+@media screen and ( min-width: 701px ) { 
+	/*首页*/
+	.hd_body{  width: 700px; margin: 0 auto; position: relative; padding: 0px 0px 30px; }
+	.hd_body:after{ clear: both; content: ""; display: table; }
+	.hd_body img.hd_head_bg{ width: 100%; height: auto; }
+
+	.hd_mokuai_wp{ margin: 60px 30px 0px; border: 1px solid #8b1c24; border-radius: 6px; position: relative; }
+	/*.hd_mokuai_wp.hd_time_wp{ margin-top: -70px; text-align: center; }*/
+	.hd_mokuai_box{ margin: -8px 6px 6px; border: 1px solid #8b1c24; border-radius: 6px; padding: 48px 15px 20px; }
+	.hd_mokuai_box h4{ width: 180px; text-align: center; background: #ebeef8; border: 1px solid #8b1c24; border-radius: 6px; height: 50px; line-height: 50px; font-size: 28px; position: absolute; left: 50%; top: -30px; margin-left: -90px; color: #8b1c24; }
+
+	.hd_cont_wp{ font-size: 22px; line-height: 38px; }
+
+	.hd_ms_wp{ font-size: 22px; line-height: 38px; margin: -115px 40px 0px; }
+	.table_box{ text-align: center; font-size: 14px; width: 100%; background: #8d8d8d; }
+	.table_box th{ background: #ffeceb; /*font-weight: normal;*/ }
+	.table_box td{ background: #fff; }
+	.table_box td.beizhu{ font-size: 10px; line-height: 16px; }
+	.table_box td strong.jianglis{ color: red; }
+
+	.hd_food_wp{ font-size: 22px; line-height: 38px; margin: 20px 30px 0px; }
+
+}
+
+
+/* 设置了浏览器宽度不大于1000px时 Mobiel */ 
+@media screen and ( max-width: 700px ) { 
+	.hd_body{ width: 100%; position: relative; padding: 0px 0px 30px; }
+	.hd_body:after{ clear: both; content: ""; display: table; }
+	.hd_body img.hd_head_bg{ width: 100%; height: auto; }
+
+	.hd_mokuai_wp{ margin: 46px 15px 0px; border: 1px solid #8b1c24; border-radius: 5px; position: relative; }
+	/*.hd_mokuai_wp.hd_time_wp{ margin-top: -50px; text-align: center; }*/
+	.hd_mokuai_box{ margin: -6px 4px 4px; border: 1px solid #8b1c24; border-radius: 5px; padding: 36px 12px 14px; }
+	.hd_mokuai_box h4{ width: 130px; text-align: center; background: #ebeef8; border: 1px solid #8b1c24; border-radius: 5px; height: 40px; line-height: 40px; font-size: 20px; position: absolute; left: 50%; top: -24px; margin-left: -65px; color: #8b1c24; }
+
+	
+	.hd_cont_wp{ font-size: 15px; line-height: 28px; }
+
+	.hd_ms_wp{ font-size: 16.5px; line-height: 28px; margin: -65px 20px 0px; }
+	.table_box{ text-align: center; font-size: 11px; width: 100%; background: #8d8d8d; margin: 4px 0px; }
+	.table_box th{ background: #ffeceb; /*font-weight: normal;*/ }
+	.table_box td{ background: #fff; }
+	.table_box td.beizhu{ font-size: 10px; line-height: 16px; }
+	.table_box td strong.jianglis{ color: red; }
+
+	.hd_food_wp{ font-size: 16.5px; line-height: 28px; margin: 20px 15px 0px; }
+	
+
+}
