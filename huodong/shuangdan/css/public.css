@@ -34,8 +34,9 @@ body{ font:15px/24px Arial,"microsoft yahei"; color:#000; background:#ebeef8; }
 
 	.hd_ms_wp{ font-size: 22px; line-height: 38px; margin: -115px 40px 0px; }
 	.table_box{ text-align: center; font-size: 14px; width: 100%; background: #8d8d8d; }
-	.table_box th{ background: #ffeceb; /*font-weight: normal;*/ }
-	.table_box td{ background: #fff; }
+	.table_box th{ background: #fff1f1; line-height: 20px; padding: 12px 0px; }
+	.table_box th.gift_th{ background: #fbd0ce; font-size: 16px; }
+	.table_box td{ background: #fff; line-height: 20px; padding: 10px 0px; }
 	.table_box td.beizhu{ font-size: 10px; line-height: 16px; }
 	.table_box td strong.jianglis{ color: red; }
 
@@ -60,8 +61,9 @@ body{ font:15px/24px Arial,"microsoft yahei"; color:#000; background:#ebeef8; }
 
 	.hd_ms_wp{ font-size: 16.5px; line-height: 28px; margin: -65px 20px 0px; }
 	.table_box{ text-align: center; font-size: 11px; width: 100%; background: #8d8d8d; margin: 4px 0px; }
-	.table_box th{ background: #ffeceb; /*font-weight: normal;*/ }
-	.table_box td{ background: #fff; }
+	.table_box th{ background: #fff1f1; line-height: 20px; padding: 8px 0px; }
+	.table_box th.gift_th{ background: #fbd0ce; font-size: 14px; }
+	.table_box td{ background: #fff; line-height: 20px; padding: 6px 0px; }
 	.table_box td.beizhu{ font-size: 10px; line-height: 16px; }
 	.table_box td strong.jianglis{ color: red; }
 
