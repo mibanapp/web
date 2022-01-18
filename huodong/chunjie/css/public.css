@@ -12,7 +12,7 @@ a:link,a:visited{color:#0072ff;/*text-decoration:none;*/}
 a:hover{color:#09baef;/*text-decoration:none;*/}
 
 body{ font:15px/24px Arial,"microsoft yahei"; color:#ac0700; background:#900000; }
-
+canvas {width: 100%; height: auto; position: fixed; left: 0px; top: 0px; z-index: 1; pointer-events: none; }
 
 
 .hd_body{ margin: 0 auto; padding: 0px; position: relative; background:#ac0000; }
