@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dd,dt,p,input{margin:0px;padding:0px;}
+ul,li,dl,dd,dt,ol{list-style:none;}
+ins{display:none;}
+img{border:none;display: block;}
+.clear{font-size:0px;line-height:0px;display:block;clear:both;}
+
+a{cursor:pointer;}
+a:link,a:visited{color:#0072ff;/*text-decoration:none;*/}
+a:hover{color:#09baef;/*text-decoration:none;*/}
+
+body{ font:15px/24px Arial,"microsoft yahei"; color:#ac0700; background:#900000; }
+
+
+
+.hd_body{ margin: 0 auto; padding: 0px; position: relative; background:#ac0000; }
+.hd_body:after{ clear: both; content: ""; display: table; }
+.headbg_img img{ width: 100%; height: auto; }
+
+
+/* css注释：设置了浏览器宽度不小于1001px时 PC */ 
+@media screen and ( min-width: 701px ) { 
+	.hd_body{ width: 700px; }
+	.hd_body:after{ clear: both; content: ""; display: table; }
+	/*活动目录*/	
+	.activity_menu{ padding: 0px 90px; background: url(../img/activity_menu_yanhua.png) no-repeat center 60px; background-size: 100%; }
+	.activity_menu:after{ clear: both; content: ""; display: table; }
+	.activity_box{ background: #fbc496; margin-bottom: 8px; padding: 4px; border-radius: 60px; }
+	.activity_box.jieshu{ background: #dbdbdb; }
+	.activity_box dl{ background: #ffdcab; border: 1px solid #ac0000; padding: 5px 0px; border-radius: 60px; height: 56px; position: relative; }
+	.activity_box dl:after{ clear: both; content: ""; display: table; }
+	.activity_box.jieshu dl{ background: #dbdbdb; border: 1px solid #a4a4a4; color: #999; }
+	.activity_box.jieshu dl:after{ content: "活动已结束"; font-size: 18px; font-weight: bold; color: rgba(111,0,0,.3); border: 2px solid rgba(111,0,0,.3); border-radius: 4px; position: absolute; top: 19px; right: 4px; padding: 1px 4px; transform:rotate(-28deg); }
+	.activity_box dl dt{ float: left; font-weight: bold; padding: 0px 18px 0px 30px; font-size: 31px; line-height: 56px; }
+	.activity_box dl dd{ float: left; }
+	.activity_box dl dd p{ line-height: 28px; }
+	.activity_box dl dd p strong{ margin-top: 2px; display: block; font-size: 24px; }
+	.activity_box dl dd p span{ display: block; font-size: 20px; color: #c7654b; }
+	.activity_box.jieshu dl dd p span{ color: #aeaeae; }
+	/*新年感谢词*/
+	.newyear_thank{ background: #d31911; border: 2px solid #ff804d; border-radius: 12px; color: #fbf0c9; margin: 30px 45px; padding: 10px 15px; font-size: 20px; line-height: 30px; }
+	/*活动内容区域*/
+	.activity_cont_wp{ background: url(../img/activity_cont_bg.png) no-repeat 0px 0px; background-size: 100% auto; position: relative; margin-bottom: 60px; }
+	.activity_cont_wp:after{ clear: both; content: ""; display: table; }
+	.activity_cont_wp:before { content: ""; width: 100%; background: url(../img/activity_cont_bg.png) no-repeat right bottom; background-size: 100% auto; height: 40px; position: absolute; left: 0px; bottom: -24px; z-index: 5; }
+	.activity_cont_wp h2{ }
+	.activity_cont_wp h2 img{ width: 100%; border: none; display: block; }
+	.activity_cont_box{ padding: 20px 85px 6px; position: relative; z-index: 10; }
+	.activity_cont_box h3.activity_title{ background: #c30706; padding: 4px; border-radius: 10px; }
+	.activity_cont_box h3.activity_title strong{ display: block; text-align: center; border: 1.5px solid #f1c59e; border-radius: 8px; color: #f8e8b2; line-height: 50px; font-size: 26px; font-weight: 500; }
+	.activity_cont_box ins{ position: absolute; top: 36%; left: 50%; margin-left: -190px; font-size: 70px; text-decoration: none; letter-spacing:-0.5px; line-height: 100px; font-weight: bold; color: rgba(111,0,0,.3); border: 6px solid rgba(111,0,0,.3); border-radius: 12px; padding: 2px 18px; transform:rotate(-24deg); z-index: 100; display: block; pointer-events: none; /*background: rgba(255,255,255,.4);*/ }
+	.activity_cont_txt{ font-size: 22px; line-height: 32px; padding: 5px; margin-top: 10px; }
+	.activity_cont_txt h4{ line-height: 32px; color: #000; }
+	.activity_cont_txt p strong.red{ color: #f00; }
+	.table_box{ text-align: center; font-size: 18px; width: 100%; background: #997777; margin: 12px 0px; color: #000; }
+	.table_box th{ background: #ffd5b1; line-height: 20px; padding: 10px 0px; }
+	.table_box td{ background: #fff; line-height: 20px; padding: 8px 0px; }
+	.table_box td.beizhu{ font-size: 10px; line-height: 16px; }
+	.table_box td strong.red{ color: red; }
+	.reward_btn_zt{ margin: 18px 0px; }
+	.reward_btn_zt p span{ display: block; height: 76px; line-height: 76px; text-align: center; font-size: 32px; font-weight: 500; border-radius: 70px; }
+	.reward_btn_zt p span.zt_ylqjl , .reward_btn_zt p span.zt_wdb{ background: #eddfb2; box-shadow: 0px 7px 0px #d9ca9b; color: #ccbc87; text-shadow: 0px 2px 0px #fdf2cf; }
+	.reward_btn_zt p span.zt_wdljsj{ background: #e9deb8; box-shadow: 0px 7px 0px #d9cea8; color: #bdb493; text-shadow: 0px 2px 0px #fdf2cf; }
+	.reward_btn_zt p span.zt_jlygq{ background: #dbdbdb; box-shadow: 0px 7px 0px #b6b6b6; color: #b7b7b7; text-shadow: 0px 2px 0px #eaeaea; }
+	.reward_btn_zt p span.zt_dwlqjl{  }
+	.reward_btn_zt p span.zt_dwlqjl img{ width: 100%; display: block; }
+	
+
+	/*页面底部*/
+	.footer_wp{ position: relative; text-align: center; color: #fdf9cd; }
+	.footer_wp:after{ clear: both; content: ""; display: table; }
+	.footer_wp img{ width: 100%; border: none; display: block; }
+	.footer_cont{ width: 100%; position: absolute; left: 0px; bottom: 58px; }
+	.footer_cont strong{ display: block; height: 40px; line-height: 40px; font-size: 30px; }
+	.footer_cont span{ display: block; height: 30px; line-height: 30px; font-size: 24px; margin-top: 20px; }
+	.footer_cont em{ display: block; height: 30px; line-height: 30px; font-size: 16px; color: rgba(253,249,205,.5); text-transform: uppercase; font-style: normal; }
+	
+
+	
+
+}
+
+
+/* 设置了浏览器宽度不大于1000px时 Mobiel */ 
+@media screen and ( max-width: 700px ) { 
+	.hd_body{ width: 100%; }
+	.hd_body:after{ clear: both; content: ""; display: table; }
+	/*活动目录*/	
+	.activity_menu{ padding: 0px 10%; background: url(../img/activity_menu_yanhua.png) no-repeat center 38px; background-size: 100%; }
+	.activity_menu:after{ clear: both; content: ""; display: table; }
+	.activity_box{ background: #fbc496; margin-bottom: 4px; padding: 2px; border-radius: 60px; }
+	.activity_box.jieshu{ background: #dbdbdb; }
+	.activity_box dl{ background: #ffdcab; border: 1px solid #ac0000; padding: 3px 0px; border-radius: 60px; height: 32px; position: relative; }
+	.activity_box dl:after{ clear: both; content: ""; display: table; }
+	.activity_box.jieshu dl{ background: #dbdbdb; border: 1px solid #a4a4a4; color: #999; }
+	.activity_box.jieshu dl:after{ content: "活动已结束"; font-size: 10px; letter-spacing:-0.5px; line-height: 18px; font-weight: bold; color: rgba(111,0,0,.3); border: 1px solid rgba(111,0,0,.3); border-radius: 3px; position: absolute; top: 11px; right: 1px; padding: 0px 2px; transform:rotate(-28deg); }
+	.activity_box dl dt{ float: left; font-weight: bold; padding: 0px 8px 0px 15px; font-size: 19px; line-height: 32px; }
+	.activity_box dl dd{ float: left; }
+	.activity_box dl dd p{ line-height: 14px; }
+	.activity_box dl dd p strong{ margin-top: 2px; display: block; font-size: 15px; }
+	.activity_box dl dd p span{ margin-top: 1px; display: block; font-size: 12px; color: #c7654b; }
+	.activity_box.jieshu dl dd p span{ color: #aeaeae; }
+	/*新年感谢词*/
+	.newyear_thank{ background: #d31911; border: 1px solid #ff804d; border-radius: 9px; color: #fbf0c9; margin: 24px 7%; padding: 7px 11px; font-size: 15px; line-height: 18px; font-weight: 600; }
+	/*活动内容区域*/
+	.activity_cont_wp{ background: url(../img/activity_cont_bg.png) no-repeat 0px 0px; background-size: 100% auto; position: relative; margin-bottom: 40px; }
+	.activity_cont_wp:after{ clear: both; content: ""; display: table; }
+	.activity_cont_wp:before { content: ""; width: 100%; background: url(../img/activity_cont_bg.png) no-repeat right bottom; background-size: 100% auto; height: 24px; position: absolute; left: 0px; bottom: -18px; z-index: 5; }
+	.activity_cont_wp h2{ }
+	.activity_cont_wp h2 img{ width: 100%; border: none; display: block; }
+	.activity_cont_box{ padding: 15px 12% 0px; position: relative; z-index: 10; }
+	.activity_cont_box h3.activity_title{ background: #c30706; padding: 3px; border-radius: 8px; }
+	.activity_cont_box h3.activity_title strong{ display: block; text-align: center; border: 1px solid #f1c59e; border-radius: 6px; color: #f8e8b2; line-height: 34px; font-size: 18px; font-weight: 500; }
+	.activity_cont_box ins{ position: absolute; top: 38%; left: 22%; font-size: 36px; text-decoration: none; letter-spacing:-0.5px; line-height: 56px; font-weight: bold; color: rgba(111,0,0,.3); border: 4px solid rgba(111,0,0,.3); border-radius: 8px; padding: 2px 14px; transform:rotate(-24deg); z-index: 100; display: block; pointer-events: none; /*background: rgba(255,255,255,.4);*/ }
+	.activity_cont_txt{ font-size: 14px; line-height: 20px; padding: 5px; margin-top: 5px; }
+	.activity_cont_txt h4{ line-height: 20px; color: #000; }
+	.activity_cont_txt p strong.red{ color: #f00; }
+	.table_box{ text-align: center; font-size: 13px; width: 100%; background: #997777; margin: 8px 0px; color: #000; }
+	.table_box th{ background: #ffd5b1; line-height: 20px; padding: 6px 0px; }
+	.table_box td{ background: #fff; line-height: 20px; padding: 4px 0px; }
+	.table_box td.beizhu{ font-size: 10px; line-height: 16px; }
+	.table_box td strong.red{ color: red; }
+	.reward_btn_zt{ margin: 12px 0px; }
+	.reward_btn_zt p span{ display: block; height: 44px; line-height: 44px; text-align: center; font-size: 21px; font-weight: 600; border-radius: 50px; }
+	.reward_btn_zt p span.zt_ylqjl , .reward_btn_zt p span.zt_wdb{ background: #eddfb2; box-shadow: 0px 4px 0px #d9ca9b; color: #ccbc87; text-shadow: 0px 1px 0px #fdf2cf; }
+	.reward_btn_zt p span.zt_wdljsj{ background: #e9deb8; box-shadow: 0px 4px 0px #d9cea8; color: #bdb493; text-shadow: 0px 1px 0px #fdf2cf; }
+	.reward_btn_zt p span.zt_jlygq{ background: #dbdbdb; box-shadow: 0px 4px 0px #b6b6b6; color: #b7b7b7; text-shadow: 0px 1px 0px #eaeaea; }
+	.reward_btn_zt p span.zt_dwlqjl{  }
+	.reward_btn_zt p span.zt_dwlqjl img{ width: 100%; display: block; }
+
+	/*页面底部*/
+	.footer_wp{ position: relative; text-align: center; color: #fdf9cd; }
+	.footer_wp:after{ clear: both; content: ""; display: table; }
+	.footer_wp img{ width: 100%; border: none; display: block; }
+	.footer_cont{ width: 100%; position: absolute; left: 0px; bottom: 14%; }
+	.footer_cont strong{ display: block; height: 30px; line-height: 30px; font-size: 20px; }
+	.footer_cont span{ display: block; height: 24px; line-height: 24px; font-size: 16px; margin-top: 8px; }
+	.footer_cont em{ display: block; height: 24px; line-height: 24px; font-size: 12px; color: rgba(253,249,205,.5); text-transform: uppercase; font-style: normal; }
+
+	
+	
+
+}
