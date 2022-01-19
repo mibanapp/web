@@ -1,0 +1,78 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+
+
+<title>自定义弹窗动画插件</title>
+
+<style type="text/css">
+*{ margin:0px; padding:0px; box-sizing:border-box; }
+*:focus{ outline:none;}
+.tsm{ background:#333; font-size:13px; color:#fff; margin:20px; margin-top:0px; padding:12px; line-height:25px;}
+.tsm .p2{ margin-top:12px;}
+.btns{ padding:20px;}
+.btns div{ display:block; text-align:center; cursor:pointer; padding:10px; border-radius:5px; background:#0CC; color:#fff; margin-bottom:12px; width:100%;}
+
+.reward-mask{ width: 100%; height: 100%; position: fixed; background: rgba(0,0,0,0.8); left: 0; top: 0; z-index: 80; }
+.reward-dialog{ position: fixed; display: none; background: #fff; border-radius: 5px; overflow: hidden; width:300px; max-width: 90%; max-height:80%; left: 0; right: 0; margin: 0 auto; z-index: 88; }
+.reward-dialog.animated{ -webkit-animation-duration:.3s; animation-duration:.3s; }
+.reward-dialog .reward-title{height:45px;color:#333;line-height:45px;font-size:15px;border-bottom:1px solid #eee;padding:0 12px}
+.reward-dialog .reward-content{padding:20px;text-align:center;font-size:14px;line-height:24px;color:#666;overflow-y:auto}
+.reward-dialog .reward-btn{height:50%;border-top:1px solid #eee;overflow:hidden}
+.reward-dialog .reward-btn button{float:left;border:0;color:#333;cursor:pointer;background:#fff;width:50%;line-height:45px;font-size:15px;text-align:center}
+.reward-dialog .reward-btn button:nth-child(1){color:#888;border-right:1px solid #eee}
+.reward-dialog.reward-dialog-alert .reward-btn button{float:none;width:100%}
+</style>
+
+</head>
+
+<body style="background:#eee;">
+
+<div class="btns">
+<div onClick="rewarddialog.rewardopen('alert1')">确认弹窗</div>
+<div onClick="rewarddialog.rewardopen('alert2')">消息弹窗</div>
+</div>
+
+<!-- 确认弹窗 -->
+<div class="reward-dialog animated" reward-enter="zoomIn" reward-leave="zoomOut" reward-type="confirm" reward-mask="true" id="alert1">
+  <div class="reward-title">温馨提示</div>
+  <div class="reward-content">你喜欢此插件吗？</div>
+  <div class="reward-btn">
+    <button onClick="rewarddialog.rewardhide('alert1')">取消</button>
+    <button onClick="ok('alert1')">确定</button>
+  </div>
+</div>
+
+<!-- 消息弹窗 -->
+<div class="reward-dialog reward-dialog-alert animated" reward-enter="zoomIn" reward-leave="zoomOut" reward-type="alert" reward-mask="true" id="alert2">
+  <div class="reward-title">温馨提示</div>
+  <div class="reward-content">提交成功，谢谢！</div>
+  <div class="reward-btn">
+    <button onClick="ok('alert2')">确定</button>
+  </div>
+</div>
+
+
+<div class="tsm">
+  <p>使用插件请参考index.html 里面的例子，插件依赖jquery.js , animate.css</p>
+  <p class="p2">html 不会自动创建，请将上面弹窗HTML结构搬到自己网页</p>
+  <p class="p2">具体使用方法： 
+  <p>打开弹窗 rewarddialog.rewardopen(id)</p>
+  <p>关闭弹窗 rewarddialog.rewardhide(id)</p>
+  <p>其中id为弹窗自定义的ID</p>
+  <p class="p2">关于动画请直接在html上定义<p>
+  <p>进入动画定义：reward-enter="zoomIn"</p>
+  <p>离开动画 reward-leave="zoomOut"<p>
+  <p>其中 zoomIn和zoomOut是 animate.css里面的动画名称。可以将动画名称更改为animate.css里面的动画名称，动画就变了哦。 </p>  
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mibanapp/static/css/animate.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/mibanapp/static/js/jquery/1.10.2-jquery.min.js"></script>
+<script>var rewarddialog=function(){return{rewardopen:function(id){var dom=$("#"+id);this.rewardcenter(dom);var name=dom.attr("reward-enter");var type=dom.attr("reward-type");var mask=dom.attr("reward-mask");dom.addClass(name);dom.show();var that=this;if(mask=="true"){$("body").append("<div class='reward-mask' onclick=\"closeAlert('"+id+"')\"></div>");$(".reward-mask").fadeIn(300)}setTimeout(function(){dom.removeClass(name)},300);if(type=="tips"){setTimeout(function(){that.rewardhide(id)},1500)}},rewardhide:function(id){if(typeof id=="undefined"){var dom=$(".reward-dialog")}else{var dom=$("#"+id)}var name=dom.attr("reward-leave");dom.addClass(name);$(".reward-mask").fadeOut(300);setTimeout(function(){dom.hide();dom.removeClass(name);$(".reward-mask").remove();},300)},rewardcenter:function(dom){var mgtop=parseFloat(dom.height()/2);dom.css({"top":"50%","margin-top":"-"+mgtop+"px"})}}}();</script>
+<script>function ok(id){rewarddialog.rewardhide(id)}</script>
+
+</body>
+</html>

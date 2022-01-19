@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <title>喜迎新年，年终盛典</title>
 <link rel="stylesheet" type="text/css" href="css/public.css">
+<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
 <script>(function(){var a=document.documentElement.clientWidth||document.body.clientWidth;if(a>460){a=460}else{if(a<320){a=320}}document.documentElement.style.fontSize=(a/26.5)*1+"px"})();</script>
 </head>
 
@@ -18,7 +19,7 @@
   <!-- 活动内容 开始 -->
   <div class="activity_menu">
     <!-- 活动1 开始 -->
-    <div class="activity_box">
+    <div class="activity_box"> <!-- 给结束的活动增加"jieshu" ClassName 即可显示成灰色与“活动已结束”标签 -->
       <dl>
         <dt>活动①</dt>
         <dd>
@@ -40,7 +41,7 @@
     </div>
     <!-- 活动2 结束 -->
     <!-- 活动3 开始-->
-    <div class="activity_box">
+    <div class="activity_box"> <!-- 给结束的活动增加"jieshu" ClassName 即可显示成灰色与“活动已结束”标签 -->
       <dl>
         <dt>活动③</dt>
         <dd>
@@ -51,7 +52,7 @@
     </div>
     <!-- 活动3 结束 -->
     <!-- 活动4 开始-->
-    <div class="activity_box">
+    <div class="activity_box"> <!-- 给结束的活动增加"jieshu" ClassName 即可显示成灰色与“活动已结束”标签 -->
       <dl>
         <dt>活动④</dt>
         <dd>
@@ -62,7 +63,7 @@
     </div>
     <!-- 活动4 结束 -->
     <!-- 活动5 开始-->
-    <div class="activity_box">
+    <div class="activity_box"> <!-- 给结束的活动增加"jieshu" ClassName 即可显示成灰色与“活动已结束”标签 -->
       <dl>
         <dt>活动⑤</dt>
         <dd>
@@ -73,7 +74,7 @@
     </div>
     <!-- 活动5 结束 -->
     <!-- 活动6 开始-->
-    <div class="activity_box">
+    <div class="activity_box"> <!-- 给结束的活动增加"jieshu" ClassName 即可显示成灰色与“活动已结束”标签 -->
       <dl>
         <dt>活动⑥</dt>
         <dd>
@@ -143,7 +144,7 @@
           <!-- <p><span class="zt_wdljsj">未到领奖时间</span></p> -->
           <!-- <p><span class="zt_jlygq">奖励已过期</span></p> -->
           <!-- <p><span class="zt_wdb">未达标</span></p> -->
-          <!-- <p><span class="zt_dwlqjl"><a href="#"><img src="img/activity_lingqu_btn.png" alt="点我领取奖励"></a></span></p> -->
+          <!-- <p><span class="zt_dwlqjl" onClick="rewarddialog.rewardopen('reward_02')"><img src="img/activity_lingqu_btn.png" alt="点我领取奖励"></span></p> -->
         </div>
       </div>
     </div>
@@ -167,7 +168,7 @@
           <!-- <p><span class="zt_wdljsj">未到领奖时间</span></p> -->
           <!-- <p><span class="zt_jlygq">奖励已过期</span></p> -->
           <!-- <p><span class="zt_wdb">未达标</span></p> -->
-          <p><span class="zt_dwlqjl"><a href="#"><img src="img/activity_lingqu_btn.png" alt="点我领取奖励"></a></span></p>
+          <p><span class="zt_dwlqjl" onClick="rewarddialog.rewardopen('reward_03')"><img src="img/activity_lingqu_btn.png" alt="点我领取奖励"></span></p>
         </div>
       </div>
     </div>
@@ -191,7 +192,7 @@
           <p><span class="zt_wdljsj">未到领奖时间</span></p>
           <!-- <p><span class="zt_jlygq">奖励已过期</span></p> -->
           <!-- <p><span class="zt_wdb">未达标</span></p> -->
-          <!-- <p><span class="zt_dwlqjl"><a href="#"><img src="img/activity_lingqu_btn.png" alt="点我领取奖励"></a></span></p> -->
+          <!-- <p><span class="zt_dwlqjl" onClick="rewarddialog.rewardopen('reward_04')"><img src="img/activity_lingqu_btn.png" alt="点我领取奖励"></span></p> -->
         </div>
       </div>
     </div>
@@ -415,7 +416,53 @@
 
 </div>
 
+
+<!-- 活动二 奖励弹窗 开始-->
+<div class="reward-dialog animated" reward-enter="zoomIn" reward-leave="zoomOut" reward-type="confirm" reward-mask="true" id="reward_02">
+  <img src="img/reward_dialog_bg.png" class="reward_dialog_img">
+  <div class="reward-content">
+    <p class="gongxi">恭喜获得</p>
+    <p class="reward-number"><strong>100</strong><span>元宝</span></p>
+    <p class="smtxt">已加到我的收益中</p>    
+  </div>
+  <div class="reward-btn">
+    <strong onClick="ok('reward_02')">开心收下</strong>
+  </div>
+</div>
+<!-- 活动二 奖励弹窗 结束-->
+
+<!-- 活动三 奖励弹窗 开始-->
+<div class="reward-dialog animated" reward-enter="zoomIn" reward-leave="zoomOut" reward-type="confirm" reward-mask="true" id="reward_03">
+  <img src="img/reward_dialog_bg.png" class="reward_dialog_img">
+  <div class="reward-content">
+    <p class="gongxi">恭喜获得</p>
+    <p class="reward-number"><strong>100</strong><span>元宝</span></p>
+    <p class="smtxt">已加到我的收益中</p>    
+  </div>
+  <div class="reward-btn">
+    <strong onClick="ok('reward_03')">开心收下</strong>
+  </div>
+</div>
+<!-- 活动三 奖励弹窗 结束-->
+
+<!-- 活动四 奖励弹窗 开始-->
+<div class="reward-dialog animated" reward-enter="zoomIn" reward-leave="zoomOut" reward-type="confirm" reward-mask="true" id="reward_04">
+  <img src="img/reward_dialog_bg.png" class="reward_dialog_img">
+  <div class="reward-content">
+    <p class="gongxi">恭喜获得</p>
+    <p class="reward-number"><strong>100</strong><span>元宝</span></p>
+    <p class="smtxt">已加到我的收益中</p>    
+  </div>
+  <div class="reward-btn">
+    <strong onClick="ok('reward_04')">开心收下</strong>
+  </div>
+</div>
+<!-- 活动四 奖励弹窗 结束-->
+
 <script src="js/xiaxue.js"></script>
+<script src="js/jquery.min-1.10.2.js"></script>
+<script>var rewarddialog=function(){return{rewardopen:function(id){var dom=$("#"+id);this.rewardcenter(dom);var name=dom.attr("reward-enter");var type=dom.attr("reward-type");var mask=dom.attr("reward-mask");dom.addClass(name);dom.show();var that=this;if(mask=="true"){$("body").append("<div class='reward-mask' onclick=\"closeAlert('"+id+"')\"></div>");$(".reward-mask").fadeIn(300)}setTimeout(function(){dom.removeClass(name)},300);if(type=="tips"){setTimeout(function(){that.rewardhide(id)},1500)}},rewardhide:function(id){if(typeof id=="undefined"){var dom=$(".reward-dialog")}else{var dom=$("#"+id)}var name=dom.attr("reward-leave");dom.addClass(name);$(".reward-mask").fadeOut(300);setTimeout(function(){dom.hide();dom.removeClass(name);$(".reward-mask").remove();},300)},rewardcenter:function(dom){var mgtop=parseFloat(dom.height()/2);dom.css({"top":"50%","margin-top":"-"+mgtop+"px"})}}}();</script>
+<script>function ok(id){rewarddialog.rewardhide(id)}</script>
 </body>
 </html>
 
