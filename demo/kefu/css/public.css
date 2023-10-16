@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dd,dt,p,input{margin:0px;padding:0px;}
+ul,li,dl,dd,dt,ol{list-style:none;}
+ins{display:none;}
+img{border:none;display: block;}
+.clear{font-size:0px;line-height:0px;display:block;clear:both;}
+
+a{cursor:pointer;}
+a:link,a:visited{color:#0072ff;/*text-decoration:none;*/}
+a:hover{color:#09baef;/*text-decoration:none;*/}
+
+body{ font:15px/24px Arial,"microsoft yahei"; color:#575b60; background:#fff; }
+
+
+.hd_body{ margin: 0 auto; padding: 0px; position: relative; }
+/*.hd_body:after{ clear: both; content: ""; display: table; }*/
+
+.myiframe{ overflow-x:scroll; overflow-y:hidden; margin: 0px; padding: 0px; width: 100%; }
+.top_back{ position: fixed; width: 100%; height: 50px; line-height: 50px; left: 0px; top: 0px; }
+
+
+/* css注释：设置了浏览器宽度不小于1001px时 PC */ 
+@media screen and ( min-width: 701px ) { 
+	.hd_body{ width: 700px; }
+	.top_back_zj{ width: 700px; margin: 0px auto; background: red; }
+
+}
+
+
+/* 设置了浏览器宽度不大于1000px时 Mobiel */ 
+@media screen and ( max-width: 700px ) { 
+	.hd_body{ width: 100%; }
+	.top_back_zj{ width: 100%; background: red; }
+}

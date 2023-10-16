@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>听音寻友-效果演示Dome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mibanapp/static/css/swiper/swiper.min.css">
+
+  <!-- Demo styles -->
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+      background: #444;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 60%;
+    }
+
+    .swiper-wrapper{ width: 120%; }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #606060;
+      border-radius: 12px;
+      width: 120%;
+      /*padding: 0 2%;*/
+      /*left: -1%;*/
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+	  transition: 300ms;
+	  transform: scale(0.8);
+    }
+
+    .swiper-slide-prev{ right: 10%; }
+    .swiper-slide-next{ left: 10%; }
+
+	.swiper-slide-active,.swiper-slide-duplicate-active{
+      transform: scale(1);
+	}
+
+
+  .swiper-slide{ position: relative; }
+  /*.swiper-slide:after{ clear: both; content: ""; display: table; }*/
+  .swiper-slide:after{ content: ""; display: block; width: 100%; height: 100%; position: absolute; border-radius: 12px; backdrop-filter: blur(15px); background-color: rgba(0, 0, 0, 0.7); z-index: 1; }
+  .swiper-slide ins{ width: 100%; height: 100%; border-radius: 12px; display: block; }
+  .swiper-slide p{ width: 100%; height: 100%; position: absolute; z-index: 5; color: #fff; }
+  .swiper-slide p img{ width: 160px; height: 160px; display: block; margin: 30% auto 8px; border-radius: 100%; }
+
+
+  </style>
+</head>
+<body>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><ins style="background: url(https://cdn.jsdelivr.net/gh/aaapcc/static/img/public/avatar/86ecbd542239.jpg) center center;"></ins><p><img src="https://cdn.jsdelivr.net/gh/aaapcc/static/img/public/avatar/86ecbd542239.jpg">听音寻友01</p></div>
+      <div class="swiper-slide"><ins style="background: url(https://cdn.jsdelivr.net/gh/aaapcc/static/img/public/avatar/86ecbd542190.jpg) center center;"></ins><p><img src="https://cdn.jsdelivr.net/gh/aaapcc/static/img/public/avatar/86ecbd542190.jpg">听音寻友02</p></div>
+      <div class="swiper-slide"><ins style="background: url(https://cdn.jsdelivr.net/gh/aaapcc/static/img/public/avatar/86ecbd542295.jpg) center center;"></ins><p><img src="https://cdn.jsdelivr.net/gh/aaapcc/static/img/public/avatar/86ecbd542295.jpg">听音寻友03</p></div>
+      <div class="swiper-slide"><ins style="background: url(https://cdn.jsdelivr.net/gh/aaapcc/static/img/public/avatar/86ecbd542386.jpg) center center;"></ins><p><img src="https://cdn.jsdelivr.net/gh/aaapcc/static/img/public/avatar/86ecbd542386.jpg">听音寻友04</p></div>
+      <div class="swiper-slide"><ins style="background: url(https://cdn.jsdelivr.net/gh/aaapcc/static/img/public/avatar/86ecbd542351.jpg) center center;"></ins><p><img src="https://cdn.jsdelivr.net/gh/aaapcc/static/img/public/avatar/86ecbd542351.jpg">听音寻友05</p></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/gh/mibanapp/static/js/swiper/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 10,
+	  centeredSlides: true,
+	  loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+
+
+  </script>
+</body>
+</html>

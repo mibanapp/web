@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dd,dt,p,input{margin:0px;padding:0px;}
+ul,li,dl,dd,dt,ol{list-style:none;}
+ins{display:none;}
+img{border:none;display: block;}
+.clear{font-size:0px;line-height:0px;display:block;clear:both;}
+
+a{cursor:pointer;}
+a:link,a:visited{color:#0072ff;/*text-decoration:none;*/}
+a:hover{color:#09baef;/*text-decoration:none;*/}
+
+body{ font:15px/24px Arial,"microsoft yahei"; color:#575b60; background:#fff; }
+
+
+.hd_body{ margin: 0 auto; padding: 0px; position: relative; /*background:#ac0000;*/ }
+.hd_body:after{ clear: both; content: ""; display: table; }
+.info_panel{  }
+.info_panel ul{ margin: 25px 15px; padding: 8px 15px; border: 1px solid #e2e2e2; border-radius: 6px; }
+.info_panel ul:after{ clear: both; content: ""; display: table; }
+.info_panel ul li{ height: 30px; line-height: 30px; position: relative; }
+.info_panel ul li span{ color: #999aae; display: block; float: left; }
+.info_panel ul li strong{ display: block; float: left; font-weight: normal; }
+
+
+/* css注释：设置了浏览器宽度不小于1001px时 PC */ 
+@media screen and ( min-width: 701px ) { 
+	.hd_body{ width: 700px; }
+	.info_panel ul li{ }
+	.info_panel ul li span{ width: 94px; }
+	.info_panel ul li strong{ width: calc(100% - 94px); }
+}
+
+
+/* 设置了浏览器宽度不大于1000px时 Mobiel */ 
+@media screen and ( max-width: 700px ) { 
+	.hd_body{ width: 100%; }
+	.info_panel ul li{  }
+	.info_panel ul li span{ width: 94px; }
+	.info_panel ul li strong{ width: calc(100% - 94px); }
+	
+}
